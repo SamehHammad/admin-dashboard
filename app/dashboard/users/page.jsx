@@ -1,9 +1,10 @@
+import Search from '@/app/ui/dashboard/search/Search'
 import React from 'react'
 
 export default function Users() {
   return (
     <div>
-      Users
+      <Search placeholder={'Search or User'}/>
     </div>
   )
 }
