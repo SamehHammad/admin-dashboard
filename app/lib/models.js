@@ -29,6 +29,9 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    createdAt: {
+      type: String,
+    },
     phone: {
       type: String,
     },
@@ -66,7 +69,7 @@ const productSchema = new mongoose.Schema(
     color: {
       type: String,
     },
-    size: {
+    weight: {
       type: String,
     },
   },
