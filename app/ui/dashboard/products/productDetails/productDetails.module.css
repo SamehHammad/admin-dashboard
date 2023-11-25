@@ -15,12 +15,16 @@
   }
   
   .imgContainer{
-    width: 100%;
+    max-width: 100%;
     height: 300px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
+  }
+  .img{
+    max-width: 100%;
+    height: 300px;
   }
   
   .formContainer {

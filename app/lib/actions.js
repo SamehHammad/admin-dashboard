@@ -2,25 +2,23 @@
 
 import { revalidatePath } from "next/cache";
 import { Product, User } from "./models";
-import { connectToDB } from "./utils";
+import { connectedToDB } from "./utils";
 import { redirect } from "next/navigation";
-import bcrypt from "bcrypt";
-import { signIn } from "../auth";
 
 export const addUser = async (formData) => {
   const { username, email, password, phone, address, isAdmin, isActive } =
     Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    connectedToDB();
 
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
+    // const salt = await bcrypt.genSalt(10);
+    // const hashedPassword = await bcrypt.hash(password, salt);
 
     const newUser = new User({
       username,
       email,
-      password: hashedPassword,
+      password,
       phone,
       address,
       isAdmin,
@@ -42,7 +40,7 @@ export const updateUser = async (formData) => {
     Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    connectedToDB();
 
     const updateFields = {
       username,
@@ -74,7 +72,7 @@ export const addProduct = async (formData) => {
     Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    connectedToDB();
 
     const newProduct = new Product({
       title,
@@ -100,7 +98,7 @@ export const updateProduct = async (formData) => {
     Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    connectedToDB();
 
     const updateFields = {
       title,
@@ -130,7 +128,7 @@ export const deleteUser = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    connectedToDB();
     await User.findByIdAndDelete(id);
   } catch (err) {
     console.log(err);
@@ -144,7 +142,7 @@ export const deleteProduct = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    connectedToDB();
     await Product.findByIdAndDelete(id);
   } catch (err) {
     console.log(err);
@@ -154,12 +152,4 @@ export const deleteProduct = async (formData) => {
   revalidatePath("/dashboard/products");
 };
 
-export const authenticate = async (prevState, formData) => {
-  const { username, password } = Object.fromEntries(formData);
 
-  try {
-    await signIn("credentials", { username, password });
-  } catch (err) {
-    return "Wrong Credentials!";
-  }
-};
