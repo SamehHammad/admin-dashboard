@@ -1,7 +1,8 @@
-import Navbar from "../ui/dashboard/navbar/navbar"
-import Sidebar from "../ui/dashboard/sidebar/sidebar"
-import styles from "../ui/dashboard/dashboard.module.css"
-import Footer from "../ui/dashboard/footer/footer"
+
+import styles from "@/app/ui/dashboard/dashboard.module.css"
+import Sidebar from "@/app/ui/dashboard/sidebar/Sidebar"
+import Footer from "@/app/ui/dashboard/footer/Footer"
+import Navbar from "@/app/ui/dashboard/navbar/Navbar"
 
 const Layout = ({children}) => {
   return (
