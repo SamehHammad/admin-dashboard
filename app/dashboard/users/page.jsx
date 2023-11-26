@@ -1,4 +1,4 @@
-// import Pagination from "@/app/ui/dashboard/pagination/Pagination";
+import Pagination from "@/app/ui/dashboard/pagination/Pagination";
 import Search from "@/app/ui/dashboard/search/Search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Link from "next/link";
@@ -65,7 +65,7 @@ const UsersPage = async ({ searchParams }) => {
           ))}
         </tbody>
       </table>
-      {/* <Pagination count={count} /> */}
+      <Pagination count={count} />
     </div>
   );
 };
