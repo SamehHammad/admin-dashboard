@@ -10,10 +10,15 @@ import {
 
 const Navbar = () => {
   const pathname = usePathname();
+  console.log(pathname);
+
+  const pathArray = pathname.split("/").filter(Boolean);
+  
+  const currentPage = pathArray.length > 0 ? pathArray[pathArray.length - 1] : '';
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{pathname.split("/").pop()}</div>
+      <div className={styles.title}>{currentPage}</div>
       <div className={styles.menu}>
         <div className={styles.search}>
           <MdSearch />

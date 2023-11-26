@@ -1,19 +1,19 @@
 :root{
-    --bg:#020016;
-    --bgSoft:#0D0D33;
-    --text:#FAFBFF;
-    --textSoft:#8B90A3;
+  --bg:#020016;
+  --bgSoft:#121242;
+  --text:#FAFBFF;
+  --textSoft:#878ca0;
 }
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body{
-    background-color: var(--bg);
-    color: var(--text);
+  background-color: var(--bg);
+  color: var(--text);
 }
 a{
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
