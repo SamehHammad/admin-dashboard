@@ -22,9 +22,8 @@ const UsersPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>Name</td>
+            <td >Name</td>
             <td>Email</td>
-            <td>Created At</td>
             <td>Role</td>
             <td>Status</td>
             <td>Action</td>
@@ -46,9 +45,8 @@ const UsersPage = async ({ searchParams }) => {
                 </div>
               </td>
               <td>{user.email}</td>
-              <td>{user.createdAt?.toString().slice(4, 16)}</td>
               <td>{user.isAdmin ? "Admin" : "Client"}</td>
-              <td>{user.isActive ? "active" : "passive"}</td>
+              <td ><div style={{textAlign:"center"}} className={user.isActive ?styles.online:styles.offline}></div></td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/users/${user.id}`}>

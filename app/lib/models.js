@@ -75,7 +75,17 @@ const productSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
+const transactionsSchema =new mongoose.Schema(
+  {
+    name: String,
+    category: String,
+    price:  Number ,
+    img:  String ,
+    result: Boolean,
+    client: String
+  }
+)
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
 export const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
+export const Transaction = mongoose.models.Transaction || mongoose.model("Transaction",transactionsSchema)
