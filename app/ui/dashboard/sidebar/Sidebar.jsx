@@ -10,9 +10,9 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
-  MdLogout,
+
 } from "react-icons/md";
-import MenuLink from "./menuLink/MenuLink";
+import MenuLink from "./menuLink/MenuList";
 const Sidebar = () => {
   const menuItems = [
     {
@@ -95,6 +95,7 @@ const Sidebar = () => {
                   title={item.title}
                   path={item.path}
                   icon={item.icon}
+                  key={item.title}
                 />
               ))}
             </span>

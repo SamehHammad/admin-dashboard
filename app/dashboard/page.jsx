@@ -1,9 +1,10 @@
 import { cards } from "@/app/lib/data";
-import Card from "@/app/ui/dashboard/card/card";
-import Chart from "@/app/ui/dashboard/chart/chart";
-import styles from "@/app/ui/dashboard/dashboard.module.css";
-import Rightbar from "@/app/ui/dashboard/rightbar/rightbar";
-import Transactions from "@/app/ui/dashboard/transactions/transactions";
+import Card from "@/app/ui/dashboard/card/Card";
+import Transactions from "@/app/ui/dashboard/transactions/Transactions";
+import Chart from "@/app/ui/dashboard/chart/Chart";
+import Rightbar from "../ui/dashboard/rightbar/Right";
+import styles from "@/app/ui/dashboard/dashboard.module.css"
+
 
 const Dashboard = () => {
   return (

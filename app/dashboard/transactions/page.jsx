@@ -1,9 +1,10 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import styles from "@/app/ui/dashboard/products/products.module.css";
-import Search from "@/app/ui/dashboard/search/search";
-import Pagination from "@/app/ui/dashboard/pagination/pagination";
+
 import {  fetchTransactions } from "@/app/lib/data";
+import Search from "@/app/ui/dashboard/search/Search";
+import Pagination from "@/app/ui/dashboard/pagination/Pagination";
 
 const TransactionPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
