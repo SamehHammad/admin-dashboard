@@ -1,6 +1,6 @@
+import styles from "@/app/ui/dashboard/users/userDetails/userDetails.module.css";
 import { updateUser } from "@/app/lib/actions";
 import { fetchUser } from "@/app/lib/data";
-import styles from "@/app/ui/dashboard/users/userDetails/userDetails.module.css";
 
 
 const SingleUserPage = async ({ params }) => {

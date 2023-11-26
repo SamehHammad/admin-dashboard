@@ -1,9 +1,9 @@
-import { deleteUser } from "@/app/lib/actions";
-import { fetchUsers } from "@/app/lib/data";
 import Pagination from "@/app/ui/dashboard/pagination/Pagination";
 import Search from "@/app/ui/dashboard/search/Search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Link from "next/link";
+import { deleteUser } from "@/app/lib/actions";
+import { fetchUsers } from "@/app/lib/data";
 
 const UsersPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
