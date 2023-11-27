@@ -21,7 +21,7 @@ const UsersPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td >Name</td>
+            <td>Name</td>
             <td>Email</td>
             <td>Role</td>
             <td>Status</td>
@@ -45,7 +45,12 @@ const UsersPage = async ({ searchParams }) => {
               </td>
               <td>{user.email}</td>
               <td>{user.isAdmin ? "Admin" : "Client"}</td>
-              <td ><div style={{textAlign:"center"}} className={user.isActive ?styles.online:styles.offline}></div></td>
+              <td>
+                <div
+                  style={{ textAlign: "center" }}
+                  className={user.isActive ? styles.online : styles.offline}
+                ></div>
+              </td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/users/${user.id}`}>
@@ -54,7 +59,7 @@ const UsersPage = async ({ searchParams }) => {
                     </button>
                   </Link>
                   <form action={deleteUser}>
-                    <input type="hidden" name="id" value={(user.id)} />
+                    <input type="hidden" name="id" value={user.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>

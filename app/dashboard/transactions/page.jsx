@@ -1,11 +1,9 @@
-
 import Link from "next/link";
 import styless from "@/app/ui/dashboard/transactions/transactions.module.css";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Pagination from "@/app/ui/dashboard/pagination/Pagination";
 import Search from "@/app/ui/dashboard/search/Search";
-import {  fetchTransactions } from "@/app/lib/data";
-
+import { fetchTransactions } from "@/app/lib/data";
 
 const TransactionPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
@@ -16,7 +14,6 @@ const TransactionPage = async ({ searchParams }) => {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Search for a transaction..." />
-      
       </div>
       <table className={styles.table}>
         <thead>
@@ -37,19 +34,22 @@ const TransactionPage = async ({ searchParams }) => {
                   <img
                     src={transaction.img || "/noproduct.jpg"}
                     alt=""
-                    width={40}
-                    height={40}
-                    className={styles.productImage}
+                    className={styless.userImage}
                   />
                   {transaction.name}
                 </div>
               </td>
               <td>{transaction.category}</td>
               <td>${transaction.price}</td>
-              <td >
-                <span className={`${styless.status}
-               ${transaction.result ? styless.done : styless.pending}`}>{transaction.result ? "Success" : "	Pending"}</span></td>
-              <td >{transaction.client}</td>
+              <td>
+                <span
+                  className={`${styless.status}
+               ${transaction.result ? styless.done : styless.pending}`}
+                >
+                  {transaction.result ? "Success" : "	Pending"}
+                </span>
+              </td>
+              <td>{transaction.client}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/transactions/${transaction.id}`}>

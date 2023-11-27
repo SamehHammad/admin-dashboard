@@ -16,17 +16,26 @@
   display: flex;
   flex-direction: column;
 }
-.username {
-  font-weight: 500;
+.userNameLight {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--lighttext);
 }
-.userTitle {
-  font-size: 12px;
+.userTitleLight {
+  font-size: 15px;
+  color: var(--lighttextSoft);
+}
+.userNameDark {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.userTitleDark {
+  font-size: 15px;
   color: var(--textSoft);
 }
 .cat {
   list-style: none;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
   margin: 10px;
-  
 }

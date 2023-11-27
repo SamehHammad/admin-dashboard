@@ -10,10 +10,11 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
-
 } from "react-icons/md";
 import MenuLink from "./menuLink/MenuList";
+import { useMode } from "@/app/ModeContext/ModeContext";
 const Sidebar = () => {
+  const { mode } = useMode();
   const menuItems = [
     {
       title: "Pages",
@@ -79,10 +80,28 @@ const Sidebar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.user}>
-              <img className={ styles.userImg} src="https://github-production-user-asset-6210df.s3.amazonaws.com/68395364/285289037-2a85229d-5bd5-4aca-a1b1-7e299815171d.jpeg" alt="" width={50} height={50} />
+        <img
+          className={styles.userImg}
+          src="https://github-production-user-asset-6210df.s3.amazonaws.com/68395364/285289037-2a85229d-5bd5-4aca-a1b1-7e299815171d.jpeg"
+          alt=""
+          width={50}
+          height={50}
+        />
         <div className={styles.userDetails}>
-          <span className={styles.userName}>Sameh Hammad</span>
-          <span className={styles.userTitle}>Front-end Developer</span>
+          <span
+            className={
+              mode === "dark" ? styles.userNameDark : styles.userNameDark
+            }
+          >
+            Sameh Hammad
+          </span>
+          <span
+            className={
+              mode === "dark" ? styles.userTitleDark : styles.userTitleLight
+            }
+          >
+            Front-end Developer
+          </span>
         </div>
       </div>
       <ul>

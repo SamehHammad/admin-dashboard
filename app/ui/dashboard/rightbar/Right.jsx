@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
 import styles from "./rightbar.module.css";
 import { MdPlayCircleFilled, MdReadMore } from "react-icons/md";
+import { useMode } from "@/app/ModeContext/ModeContext";
 
 const Rightbar = () => {
+  const { mode } = useMode();
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
+      <div className={mode === "dark" ? styles.itemDark : styles.itemLight}>
         <div className={styles.bgContainer}>
           <Image className={styles.bg} src="/astronaut.png" alt="" fill />
         </div>
@@ -25,7 +28,7 @@ const Rightbar = () => {
           </button>
         </div>
       </div>
-      <div className={styles.item}>
+      <div className={mode === "dark" ? styles.itemDark : styles.itemLight}>
         <div className={styles.text}>
           <span className={styles.notification}>🚀 Coming Soon</span>
           <h3 className={styles.title}>

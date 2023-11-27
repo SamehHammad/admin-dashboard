@@ -1,11 +1,9 @@
 import { Product, Transaction, User } from "./models";
 import { connectedToDB } from "./utils";
-const ITEM_PER_PAGE = 4;
-
+const ITEM_PER_PAGE = 6;
 
 export const fetchUsers = async (q, page) => {
   const regex = new RegExp(q, "i");
-
 
   try {
     connectedToDB();
@@ -34,7 +32,6 @@ export const fetchUser = async (id) => {
 
 export const fetchProducts = async (q, page) => {
   const regex = new RegExp(q, "i");
-
 
   try {
     connectedToDB();

@@ -1,7 +1,16 @@
-"use client"
+"use client";
 
-import styles from './chart.module.css'
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import styles from "./chart.module.css";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import { useMode } from "@/app/ModeContext/ModeContext";
 
 const data = [
   {
@@ -42,8 +51,13 @@ const data = [
 ];
 
 const Chart = () => {
+  const { mode } = useMode();
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        mode === "light" ? styles.containerLight : styles.containerDark
+      }
+    >
       <h2 className={styles.title}>Weekly Recap</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
@@ -59,14 +73,24 @@ const Chart = () => {
         >
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip contentStyle={{background:"#151c2c", border:"none"}}/>
+          <Tooltip contentStyle={{ background: "#151c2c", border: "none" }} />
           <Legend />
-          <Line type="monotone" dataKey="visit" stroke="#8884d8" strokeDasharray="5 5" />
-          <Line type="monotone" dataKey="click" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
+          <Line
+            type="monotone"
+            dataKey="visit"
+            stroke={mode === "light" ? "#020016" : "#faffff"}
+            strokeDasharray="5 5"
+          />
+          <Line
+            type="monotone"
+            dataKey="click"
+            stroke={mode === "light" ? "#020016" : "#faffff"}
+            strokeDasharray="3 4 5 2"
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
-  )
-}
+  );
+};
 
-export default Chart
+export default Chart;

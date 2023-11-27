@@ -8,10 +8,9 @@ import {
   MdSearch,
 } from "react-icons/md";
 import { useMode } from "@/app/ModeContext/ModeContext";
-import ToggleButton from "@/app/dashboard/toggleButton/ToggleButton";
 
 const Navbar = () => {
-  const { mode, toggleMode } = useMode();
+  const { mode } = useMode();
 
   const pathname = usePathname();
 
@@ -27,9 +26,7 @@ const Navbar = () => {
       <div className={mode === "dark" ? styles.titleDark : styles.titleLight}>
         {currentPage}
       </div>
-      <div>
-        <ToggleButton toggle={toggleMode} />
-      </div>
+
       <div className={mode === "dark" ? styles.menuDark : styles.menuLight}>
         <div
           className={mode === "dark" ? styles.searchDark : styles.searchLight}

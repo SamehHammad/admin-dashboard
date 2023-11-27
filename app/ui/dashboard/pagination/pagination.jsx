@@ -14,7 +14,8 @@ const Pagination = ({ count }) => {
   const ITEM_PER_PAGE = 2;
 
   const hasPrev = ITEM_PER_PAGE * (parseInt(page) - 1) > 0;
-  const hasNext = ITEM_PER_PAGE * (parseInt(page) - 1) + ITEM_PER_PAGE < count+1;
+  const hasNext =
+    ITEM_PER_PAGE * (parseInt(page) - 1) + ITEM_PER_PAGE < count + 1;
 
   const handleChangePage = (type) => {
     type === "prev"
@@ -29,6 +30,7 @@ const Pagination = ({ count }) => {
         className={styles.button}
         disabled={!hasPrev}
         onClick={() => handleChangePage("prev")}
+        style={{ bottom: "110px" }}
       >
         Previous
       </button>
@@ -36,6 +38,7 @@ const Pagination = ({ count }) => {
         className={styles.button}
         disabled={!hasNext}
         onClick={() => handleChangePage("next")}
+        style={{ bottom: "110px", right: "50px" }}
       >
         Next
       </button>

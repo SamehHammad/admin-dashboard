@@ -1,6 +1,16 @@
-.container {
+.containerLight {
   padding: 20px;
   border-radius: 10px;
+  background-color: var(--lightbgSoft);
+  color: var(--lighttext);
+  margin-top: 20px;
+}
+.containerDark {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--bgSoft);
+  color: var(--text);
+  margin-top: 20px;
 }
 
 .element {
@@ -8,7 +18,7 @@
   width: 100%;
   align-items: center;
   justify-content: start;
-  margin: 5vh 0;
+  margin: 7vh 0;
 }
 .one {
   flex: 2;
@@ -52,8 +62,17 @@
   border-radius: 10px;
   background-color: var(--bgSoft);
 }
-.btn {
-  width: 100px;
+.btnLight {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--bg);
+  padding: 0 10px;
+  background-color: var(--lightbg);
+  color: var(--lighttextColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.btnDark {
   height: 40px;
   border-radius: 10px;
   border: 1px solid var(--textSoft);
@@ -63,14 +82,8 @@
   cursor: pointer;
   transition: all 0.5 ease;
 }
-.btn:hover,
+.btnLight:hover,
+.btnDark:hover,
 .select:hover {
-  background-color: rgb(40, 97, 151);
-}
-.light {
-  background-color: var(--lightbgSoft);
-  color: var(--lighttextSoft);
-}
-.dark {
-  background-color: var(--bgSoft);
+  background-color: rgb(40, 151, 55);
 }

@@ -1,0 +1,144 @@
+.containerLight {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: var(--lightbgSoft);
+  color: var(--lighttext);
+}
+.containerDark {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--bgSoft);
+  color: var(--text);
+  margin-top: 20px;
+}
+
+.element {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  margin: 5vh 0;
+}
+.one {
+  flex: 2;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  position: relative;
+}
+.shara {
+  color: rgb(17, 97, 216);
+  position: absolute;
+  top: -19px;
+  left: -19px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tow {
+  flex: 2;
+  font-size: 20px;
+}
+.middle {
+  flex: 1;
+}
+.btnIcon {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: greenyellow;
+}
+.li {
+  margin-left: 15%;
+  text-align: start;
+  list-style: circle;
+}
+.header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.img {
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+}
+.title {
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.option {
+  border-radius: 10px;
+  background-color: var(--bgSoft);
+}
+.btnLight {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--bg);
+  padding: 0 10px;
+  background-color: var(--lightbg);
+  color: var(--lighttextColor);
+  width: auto;
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.saveBtnLight {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--lightbg);
+  color: var(--lighttextColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.saveBtnDark {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--bg);
+  color: var(--textColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.btnDark {
+  width: auto;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--bg);
+  color: var(--textColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.btnLight:hover,
+.btnDark:hover,
+.saveBtnLight:hover,
+.saveBtnDark:hover,
+.select:hover {
+  background-color: rgb(161, 159, 250);
+}

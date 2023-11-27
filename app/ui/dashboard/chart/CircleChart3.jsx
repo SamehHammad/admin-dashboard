@@ -67,7 +67,7 @@ export default class CircleChart3 extends PureComponent {
     return (
       <div className={styles.containerCC}>
         <BarChart
-          width={700}
+          width={1000}
           height={300}
           data={data}
           margin={{

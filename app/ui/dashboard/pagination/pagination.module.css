@@ -1,14 +1,29 @@
-.container{
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .button{
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .button:disabled{
-    cursor: not-allowed;
-  }
+.container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+}
+
+.button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: rgb(1, 32, 22);
+  border: none;
+  border-radius: 5px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  height: 50px;
+  position: fixed;
+}
+.button:disabled {
+  background-color: rgba(88, 88, 88, 0.205);
+  cursor: not-allowed;
+}

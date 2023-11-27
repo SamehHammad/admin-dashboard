@@ -1,13 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./toggleButton.module.css";
-import { useMode } from "@/app/ModeContext/ModeContext";
-const ToggleButton = () => {
-  const { mode, toggleMode } = useMode();
+const ToggleButton = ({ handleToggle }) => {
   const [ballOn, setBallOn] = useState(false);
   const toggleBall = () => {
     setBallOn(!ballOn);
-    toggleMode();
+    handleToggle();
   };
   return (
     <div
