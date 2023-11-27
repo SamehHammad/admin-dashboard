@@ -4,7 +4,6 @@ import styles from "@/app/ui/dashboard/permissions/permissions.module.css";
 import { useMode } from "@/app/ModeContext/ModeContext";
 import UserElement from "@/app/ui/dashboard/permissions/UserElement";
 import { usersPer } from "@/app/lib/users.js";
-import Pagination from "@/app/ui/dashboard/pagination/Pagination";
 const Permissions = () => {
   const { mode } = useMode();
   const [showAlert, setShowAlert] = useState(false);

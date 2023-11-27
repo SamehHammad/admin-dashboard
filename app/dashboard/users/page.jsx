@@ -1,4 +1,4 @@
-import Pagination from "@/app/ui/dashboard/pagination/Pagination";
+import Pagination from "@/app/ui/dashboard/itemPagination/ItemPagination";
 import Search from "@/app/ui/dashboard/search/Search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Link from "next/link";

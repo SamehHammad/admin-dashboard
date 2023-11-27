@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styless from "@/app/ui/dashboard/transactions/transactions.module.css";
 import styles from "@/app/ui/dashboard/products/products.module.css";
-import Pagination from "@/app/ui/dashboard/pagination/Pagination";
+import Pagination from "@/app/ui/dashboard/itemPagination/ItemPagination";
 import Search from "@/app/ui/dashboard/search/Search";
 import { fetchTransactions } from "@/app/lib/data";
 

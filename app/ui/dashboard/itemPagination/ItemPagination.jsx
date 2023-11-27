@@ -3,7 +3,7 @@
 import styles from "./pagination.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const Pagination = ({ count }) => {
+const ItemPagination = ({ count }) => {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -46,4 +46,4 @@ const Pagination = ({ count }) => {
   );
 };
 
-export default Pagination;
+export default ItemPagination;
