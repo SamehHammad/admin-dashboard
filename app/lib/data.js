@@ -74,6 +74,18 @@ export const fetchProduct = async (id) => {
   }
 };
 
+export const fetchTransaction = async (id) => {
+  console.log(id);
+  try {
+    connectedToDB();
+    const transaction = await Transaction.findById(id);
+    return transaction;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch Transaction!");
+  }
+};
+
 // DUMMY DATA
 
 export const cards = [

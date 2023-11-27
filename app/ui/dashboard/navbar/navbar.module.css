@@ -1,4 +1,18 @@
-.container {
+.containerLight {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--lightbgSoft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleLight {
+  color: var(--lighttextSoft);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.containerDark {
   padding: 20px;
   border-radius: 10px;
   background-color: var(--bgSoft);
@@ -7,7 +21,7 @@
   justify-content: space-between;
 }
 
-.title {
+.titleDark {
   color: var(--textSoft);
   font-weight: bold;
   text-transform: capitalize;
@@ -16,10 +30,25 @@
 .menu {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 20px;
 }
 
-.search {
+.searchLight {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  background-color: rgb(4, 108, 146);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.inputLight {
+  background-color: transparent;
+  border: none;
+  color: var(--lighttext);
+}
+.searchDark {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -28,13 +57,23 @@
   border-radius: 10px;
 }
 
-.input {
+.inputDark {
   background-color: transparent;
   border: none;
   color: var(--text);
 }
 
-.icons{
+.iconsLight {
   display: flex;
+  justify-content: end;
+  margin-top: 5px;
   gap: 20px;
+  color: var(--lighttext);
+}
+.iconsDark {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 20px;
+  color: var(--text);
 }

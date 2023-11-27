@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import styless from "@/app/ui/dashboard/transactions/transactions.module.css";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Pagination from "@/app/ui/dashboard/pagination/Pagination";
 import Search from "@/app/ui/dashboard/search/Search";
@@ -14,18 +15,16 @@ const TransactionPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a product..." />
-        <Link href="/dashboard/products/add">
-          <button className={styles.addButton}>Add New</button>
-        </Link>
+        <Search placeholder="Search for a transaction..." />
+      
       </div>
       <table className={styles.table}>
         <thead>
           <tr>
             <td>title</td>
-            <td>Product</td>
+            <td>Category</td>
             <td>Price</td>
-            <td> Result</td>
+            <td> Status</td>
             <td>Client</td>
             <td>Action</td>
           </tr>
@@ -47,8 +46,10 @@ const TransactionPage = async ({ searchParams }) => {
               </td>
               <td>{transaction.category}</td>
               <td>${transaction.price}</td>
-              <td style={{color:transaction.result?"green":"red"}}>{transaction.result?"Success":"cancelled"}</td>
-              <td>{transaction.client}</td>
+              <td >
+                <span className={`${styless.status}
+               ${transaction.result ? styless.done : styless.pending}`}>{transaction.result ? "Success" : "	Pending"}</span></td>
+              <td >{transaction.client}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/transactions/${transaction.id}`}>

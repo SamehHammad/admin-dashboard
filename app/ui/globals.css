@@ -1,19 +1,35 @@
-:root{
-  --bg:#020016;
-  --bgSoft:#121242;
-  --text:#FAFBFF;
-  --textSoft:#878ca0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --bg: #020016;
+  --bgSoft: #121242;
+  --text: #faffff;
+  --textSoft: #878ca0;
+  --lightbg: rgb(162, 252, 222);
+  --lightbgSoft: #62b1c9;
+  --lighttext: #020016;
+  --lighttextSoft: #121242;
 }
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: var(--bg);
+body {
   color: var(--text);
 }
-a{
+.dark {
+  background-color: var(--bg);
+  color: var(--text);
+  height: 100vh;
+}
+.light {
+  background-color: var(--lightbg);
+  color: var(--lighttext);
+  height: 100vh;
+}
+a {
   color: inherit;
   text-decoration: none;
 }

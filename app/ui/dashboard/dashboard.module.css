@@ -1,8 +1,21 @@
-.container {
+.containerLight {
   display: flex;
+  background-color: var(--lightbg);
+  color: var(--lighttext);
+}
+.containerDark {
+  display: flex;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-.menu {
+.menuLight {
+  flex: 1;
+  background-color: var(--lightbgSoft);
+  padding: 20px;
+  min-height: 100vh;
+}
+.menuDark {
   flex: 1;
   background-color: var(--bgSoft);
   padding: 20px;

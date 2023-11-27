@@ -1,0 +1,76 @@
+.container {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.element {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  margin: 5vh 0;
+}
+.one {
+  flex: 2;
+  text-align: flex-start;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  gap: 15px;
+}
+.tow {
+  flex: 1;
+  font-size: 20px;
+}
+.li {
+  margin-left: 15%;
+  text-align: start;
+  list-style: none;
+}
+.select {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+}
+.switch {
+  margin-left: 7%;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.option {
+  border-radius: 10px;
+  background-color: var(--bgSoft);
+}
+.btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--bgSoft);
+  color: var(--textColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.btn:hover,
+.select:hover {
+  background-color: rgb(40, 97, 151);
+}
+.light {
+  background-color: var(--lightbgSoft);
+  color: var(--lighttextSoft);
+}
+.dark {
+  background-color: var(--bgSoft);
+}

@@ -1,4 +1,14 @@
-.container {
+.containerLight {
+  background-color: var(--lightbgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  width: 100%;
+  color: var(--lighttext);
+}
+.containerDark {
   background-color: var(--bgSoft);
   padding: 20px;
   border-radius: 10px;
@@ -8,11 +18,17 @@
   width: 100%;
 }
 
-.container:hover{
+.container:hover {
   background-color: #2e374a;
 }
 
-.texts {
+.textsLight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--lighttext);
+}
+.textsDark {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -23,15 +39,24 @@
   font-weight: 500;
 }
 
-.detail {
+.detailLight {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--lighttext);
+}
+.detailDark {
   font-size: 14px;
   font-weight: 300;
 }
 
 .positive {
-  color: lime;
+  color: rgb(46, 194, 46);
+  font-weight: 900;
+  font-size: 15px;
 }
 
 .negative {
   color: red;
+  font-weight: 900;
+  font-size: 15px;
 }

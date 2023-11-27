@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { Product, User } from "./models";
+import { Product, Transaction, User } from "./models";
 import { connectedToDB } from "./utils";
 import { redirect } from "next/navigation";
 
@@ -122,6 +122,30 @@ export const updateProduct = async (formData) => {
 
   revalidatePath("/dashboard/products");
   redirect("/dashboard/products");
+};
+
+export const updateTransaction = async (formData) => {
+  // const { id, name, price, client } =
+  //   Object.fromEntries(formData);
+
+  // try {
+  //   connectedToDB();
+
+  //   const updateFields = { id, name, price, client }
+
+  //   Object.keys(updateFields).forEach(
+  //     (key) =>
+  //       (updateFields[key] === "" || undefined) && delete updateFields[key]
+  //   );
+
+  //   await Transaction.findByIdAndUpdate(id, updateFields);
+  // } catch (err) {
+  //   console.log(err);
+  //   throw new Error("Failed to update transaction!");
+  // }
+
+  revalidatePath("/dashboard/transactions");
+  redirect("/dashboard/transactions");
 };
 
 export const deleteUser = async (formData) => {

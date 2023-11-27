@@ -1,0 +1,40 @@
+.containerOn{
+    position: relative;
+    width: 65px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(23, 198, 98);
+    cursor: pointer;
+    overflow: hidden;
+}
+.containerOff{
+    position: relative;
+    width: 65px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(58, 58, 58);
+    cursor: pointer;
+    overflow: hidden;
+}
+.ballOff{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: all 1s ease;
+    z-index: 100;
+    left: 0.1px;
+    background-color: aliceblue;
+}
+.ballOn{
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 100;
+    right: 0.1px;
+    transition: all 0.5s ease;
+    background-color: aliceblue;
+
+}
+
