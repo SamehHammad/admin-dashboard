@@ -15,7 +15,7 @@ const ItemPagination = ({ count }) => {
 
   const hasPrev = ITEM_PER_PAGE * (parseInt(page) - 1) > 0;
   const hasNext =
-    ITEM_PER_PAGE * (parseInt(page) - 1) + ITEM_PER_PAGE < count + 1;
+    ITEM_PER_PAGE * (parseInt(page) - 1) + ITEM_PER_PAGE + 7 < count;
 
   const handleChangePage = (type) => {
     type === "prev"

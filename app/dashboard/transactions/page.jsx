@@ -40,7 +40,7 @@ const TransactionPage = async ({ searchParams }) => {
                 </div>
               </td>
               <td>{transaction.category}</td>
-              <td>${transaction.price}</td>
+              <td>{transaction.price} $</td>
               <td>
                 <span
                   className={`${styless.status}

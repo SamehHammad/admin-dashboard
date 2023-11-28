@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./settings.module.css";
 import { MdOutlineLanguage } from "react-icons/md";
 import ToggleButton from "@/app/dashboard/toggleButton/ToggleButton";
@@ -13,6 +13,11 @@ import { useMode } from "@/app/ModeContext/ModeContext";
 
 const SettingsDash = () => {
   const { mode, toggleMode } = useMode();
+  const [showAlert, setShowAlert] = useState(false);
+  const handleSave = () => {
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 3000);
+  };
   const anableNotif = () => console.log("notifications anabled");
   return (
     <div
@@ -20,6 +25,14 @@ const SettingsDash = () => {
         mode === "light" ? styles.containerLight : styles.containerDark
       }
     >
+      <div className="h-10">
+        {" "}
+        {showAlert && (
+          <div className="font-regular   block w-100 rounded-lg bg-green-500 p-4 text-xl leading-5 text-white opacity-80 text-center">
+            <span>All changes have been saved</span>
+          </div>
+        )}
+      </div>
       <ul>
         <li className={styles.li}>
           <div className={styles.element}>
@@ -79,10 +92,10 @@ const SettingsDash = () => {
           <div className={styles.element}>
             <div className={styles.one}>
               <MdOutlineEditNotifications className={styles.icon} />
-              Notifications :
+              Standard preloading :
             </div>
             <div className={`${styles.tow} ${styles.switch}`}>
-              <ToggleButton />
+              <ToggleButton handleToggle={() => {}} />
             </div>
           </div>
         </li>
@@ -105,6 +118,16 @@ const SettingsDash = () => {
           </div>
         </li>
       </ul>
+      <div className="w-100 text-center">
+        <button
+          className={
+            mode === "light" ? styles.saveBtnLight : styles.saveBtnDark
+          }
+          onClick={handleSave}
+        >
+          S A V E
+        </button>
+      </div>
     </div>
   );
 };

@@ -82,8 +82,34 @@
   cursor: pointer;
   transition: all 0.5 ease;
 }
+.saveBtnLight {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--lightbg);
+  color: var(--lighttextColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.saveBtnDark {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--textSoft);
+  padding: 0 10px;
+  background-color: var(--bg);
+  color: var(--textColor);
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
 .btnLight:hover,
 .btnDark:hover,
+.saveBtnLight:hover,
+.saveBtnDark:hover,
 .select:hover {
-  background-color: rgb(40, 151, 55);
+  background-color: rgb(161, 159, 250);
 }

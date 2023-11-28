@@ -27,7 +27,7 @@
 .table td {
   padding: 10px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .user {
@@ -57,10 +57,12 @@
 
 .view {
   background-color: teal;
+  font-weight: 100;
 }
 
 .delete {
   background-color: crimson;
+  font-weight: 100;
 }
 .online {
   width: 15px;

@@ -24,10 +24,10 @@ const Navbar = () => {
       className={mode === "dark" ? styles.containerDark : styles.containerLight}
     >
       <div className={mode === "dark" ? styles.titleDark : styles.titleLight}>
-        {currentPage}
+        {currentPage.toUpperCase()}
       </div>
 
-      <div className={mode === "dark" ? styles.menuDark : styles.menuLight}>
+      <div className={styles.menu}>
         <div
           className={mode === "dark" ? styles.searchDark : styles.searchLight}
         >

@@ -5,12 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 .titleLight {
   color: var(--lighttextSoft);
   font-weight: bold;
   text-transform: capitalize;
+  font-size: 20px;
+  flex: 1;
 }
 .containerDark {
   padding: 20px;
@@ -19,26 +22,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 .titleDark {
   color: var(--textSoft);
   font-weight: bold;
   text-transform: capitalize;
+  font-size: 20px;
+  flex: 1;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   gap: 20px;
+  flex: 2;
 }
 
 .searchLight {
+  background-color: rgba(71, 75, 77, 0.459);
+  width: 50%;
   display: flex;
-  justify-content: end;
   gap: 10px;
-  background-color: rgb(4, 108, 146);
   padding: 10px;
   border-radius: 10px;
 }
@@ -46,11 +53,16 @@
 .inputLight {
   background-color: transparent;
   border: none;
-  color: var(--lighttext);
+  color: black;
+}
+.inputLight::placeholder {
+  background-color: transparent;
+  border: none;
+  color: black;
 }
 .searchDark {
+  width: 50%;
   display: flex;
-  align-items: center;
   gap: 10px;
   background-color: #2e374a;
   padding: 10px;

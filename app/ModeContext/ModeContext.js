@@ -3,7 +3,7 @@ import React from "react";
 
 const ModeContext = React.createContext();
 const ModeProvider = ({ children }) => {
-  const [mode, setMode] = React.useState("light");
+  const [mode, setMode] = React.useState("dark");
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light");
   };

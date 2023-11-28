@@ -21,15 +21,42 @@ const SingleUserPage = async ({ params }) => {
       </div>
       <div className={styles.formContainer}>
         <form action={updateUser} className={styles.form}>
-          <input type="hidden" name="id" placeholder={user.id} />
+          <input
+            autocomplete="off"
+            type="hidden"
+            name="id"
+            placeholder={user.id}
+          />
           <label>Username</label>
-          <input type="text" name="username" placeholder={user.username} />
+          <input
+            autocomplete="off"
+            type="text"
+            name="username"
+            value={user.username}
+            autoComplete="iopi"
+          />
           <label>Email</label>
-          <input type="email" name="email" placeholder={user.email} />
+          <input
+            autocomplete="off"
+            type="email"
+            name="email"
+            placeholder={user.email}
+          />
           <label>Password</label>
-          <input type="password" name="password" />
+          <input
+            autocomplete="off"
+            type="password"
+            name="password"
+            placeholder={`Only ${user.username} can access password`}
+            readOnly
+          />
           <label>Phone</label>
-          <input type="text" name="phone" placeholder={user.phone} />
+          <input
+            autocomplete="off"
+            type="text"
+            name="phone"
+            placeholder={user.phone}
+          />
           <label>Address</label>
           <textarea type="text" name="address" placeholder={user.address} />
           <label>Is Admin?</label>

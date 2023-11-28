@@ -1,9 +1,10 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { Product, Transaction, User } from "./models";
+import { Product, User } from "./models";
 import { connectedToDB } from "./utils";
 import { redirect } from "next/navigation";
+import bcrypt from "bcrypt";
 
 export const addUser = async (formData) => {
   const { username, email, password, phone, address, isAdmin, isActive } =
@@ -12,13 +13,13 @@ export const addUser = async (formData) => {
   try {
     connectedToDB();
 
-    // const salt = await bcrypt.genSalt(10);
-    // const hashedPassword = await bcrypt.hash(password, salt);
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
     const newUser = new User({
       username,
       email,
-      password,
+      password: hashedPassword,
       phone,
       address,
       isAdmin,
@@ -124,30 +125,6 @@ export const updateProduct = async (formData) => {
   redirect("/dashboard/products");
 };
 
-export const updateTransaction = async (formData) => {
-  // const { id, name, price, client } =
-  //   Object.fromEntries(formData);
-
-  // try {
-  //   connectedToDB();
-
-  //   const updateFields = { id, name, price, client }
-
-  //   Object.keys(updateFields).forEach(
-  //     (key) =>
-  //       (updateFields[key] === "" || undefined) && delete updateFields[key]
-  //   );
-
-  //   await Transaction.findByIdAndUpdate(id, updateFields);
-  // } catch (err) {
-  //   console.log(err);
-  //   throw new Error("Failed to update transaction!");
-  // }
-
-  revalidatePath("/dashboard/transactions");
-  redirect("/dashboard/transactions");
-};
-
 export const deleteUser = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -175,5 +152,3 @@ export const deleteProduct = async (formData) => {
 
   revalidatePath("/dashboard/products");
 };
-
-

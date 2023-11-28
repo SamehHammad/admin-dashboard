@@ -43,14 +43,15 @@
 
 .status {
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 14px;
   color: white;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .pending {
-  background-color: #fdf03675;
+  background-color: #c48e1be8;
 }
 
 .done {
